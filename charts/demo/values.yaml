@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: hashicorp/http-echo
+  tag: stable
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  paths:
+    - /    
+  hosts:
+    - k8s.demo.net
