@@ -2,8 +2,9 @@ replicaCount: 1
 
 image:
   repository: hashicorp/http-echo
-  tag: stable
+  tag: latest
   pullPolicy: IfNotPresent
+  port: 5678
 
 service:
   type: ClusterIP
